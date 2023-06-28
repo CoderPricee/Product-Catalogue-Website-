@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { UserService } from '../services/user.service';
 import { LoginUserService } from '../services/login-user.service';
 import { Router } from '@angular/router';
-import { EventListenerFocusTrapInertStrategy } from '@angular/cdk/a11y';
+
 @Component({
   selector: 'login',
   templateUrl: './login.component.html',

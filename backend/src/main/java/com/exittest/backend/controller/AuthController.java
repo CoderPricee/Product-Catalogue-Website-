@@ -30,7 +30,7 @@ public class AuthController {
 	private CustomUserDetailService customUserDetailService;
 	@Autowired
 	private jwtUtils jwtUtil;
-	
+	//login
 	@PostMapping(value="/api/generate-token")
 	public ResponseEntity<?> generateToken(@RequestBody jwtRequest jwtRequest) throws Exception
 	{
@@ -61,10 +61,10 @@ public class AuthController {
 		
 	}
 	
-	@GetMapping("/api/currentuser")
-	public User getCurrentUser(Principal principal)
-	{
-		return ((User)(this.customUserDetailService.loadUserByUsername(principal.getName())));
-		
-	}
+//	@GetMapping("/api/currentuser")
+//	public User getCurrentUser(Principal principal)
+//	{
+//		return ((User)(this.customUserDetailService.loadUserByUsername(principal.getName())));
+//		
+//	}
 }

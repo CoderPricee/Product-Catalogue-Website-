@@ -20,7 +20,7 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 @Entity
 public class User implements UserDetails {
 	/**
-	 * 
+	 * need to declare serialversionUID for deserialization pruposes
 	 */
 	private static final long serialVersionUID = 1L;
 
@@ -91,6 +91,7 @@ public class User implements UserDetails {
 		return "User [id=" + id + ", firstName=" + firstName + ", lastName=" + lastName + ", username=" + username
 				+ ", password=" + password + ", userRoles=" + userRoles + "]";
 	}
+	//to provide authorization info 
 	@Override
 	public Collection<? extends GrantedAuthority> getAuthorities() {
 		Set<Authority> set = new HashSet<>();

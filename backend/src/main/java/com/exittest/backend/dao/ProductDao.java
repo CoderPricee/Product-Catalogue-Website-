@@ -12,4 +12,5 @@ import com.exittest.backend.model.Product;
 public interface ProductDao extends JpaRepository<Product, Integer> {
 	public List<Product> findByProductName(String productName);
 	public Product findByProductId(int productId);
+	public List<Product> findByBrandName(String brandName);
 }

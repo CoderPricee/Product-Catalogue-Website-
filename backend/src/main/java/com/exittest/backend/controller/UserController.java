@@ -39,6 +39,7 @@ public class UserController {
 	@PostMapping("/register")
 	public ResponseEntity register(@RequestBody User user) 
 	{
+	
 	Set<UserRole> roles=new HashSet<>();
 	Role role=new Role();
 	role.setRoleName("USER");

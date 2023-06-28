@@ -8,14 +8,12 @@ import { UserService } from './components/services/user.service';
 })
 export class AppComponent {
   constructor(public userService: UserService) { }
-// isUserLoggedIn()
-//   {
-//     this.userService.
-//   }
+
 admin:any;
 noOfUser:any;
 noOfReviews:any;
 noOfProducts:any;
+
   logout()
   {
     return this.userService.logout();
@@ -26,7 +24,7 @@ noOfProducts:any;
       data=>
       {
         this.noOfUser=data;
-        // console.log(data);
+       
       },
       error=>
       {
@@ -38,7 +36,7 @@ noOfProducts:any;
       data=>
       {
         this.noOfProducts=data;
-        // console.log(data);
+        
       },
       error=>
       {

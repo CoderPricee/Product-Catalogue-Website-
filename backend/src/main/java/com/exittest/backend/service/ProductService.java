@@ -44,6 +44,11 @@ public class ProductService {
 		List<Product> product= this.productDao.findByProductName(productName);
 		return product;
 	}
+public List<Product> getProductByBrandName(String brandName)
+{
+	List<Product> product= this.productDao.findByBrandName(brandName);
+	return product;
+}
 
 	/***
 	 * return product By id

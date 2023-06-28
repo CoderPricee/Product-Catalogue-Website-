@@ -10,6 +10,9 @@
 span{
     padding-right: 1rem;
 }
+body{
+    background-color: blue;
+}
 footer{
     position:fixed;
     justify-content: space-between;

@@ -81,6 +81,12 @@ export class UserService {
     return this.http.get(`${baseUrl}/search/${productName}`);
 
   }
+  public getproductByBrandName(brandName:any)
+  {
+    
+    return this.http.get(`${baseUrl}/search/${brandName}`);
+
+  }
   // add reviews
 
   public addReview(id: any, data: any) {

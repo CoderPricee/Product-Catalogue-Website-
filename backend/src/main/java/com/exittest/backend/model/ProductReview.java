@@ -13,7 +13,7 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 @Table(name="review")
 /***
  * return the Product Review Data
- * @author utkarshsrivastava01
+ * 
  *
  */
 public class ProductReview {
@@ -37,7 +37,7 @@ public class ProductReview {
 		this.rating = rating;
 	}
 	@ManyToOne
-	@JsonIgnoreProperties("review")
+	@JsonIgnoreProperties("review")//got stackoverflow error
 	private Product product;
 	public int getReviewId() {
 		return reviewId;

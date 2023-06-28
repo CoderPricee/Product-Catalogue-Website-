@@ -53,6 +53,17 @@ public class ProductController {
 	{
 		return this.productService.getProductById(id);
 	}
+	@SuppressWarnings("rawtypes")
+	@GetMapping("/product/{brandName}")
+	public ResponseEntity productByBrand(@PathVariable String brandName)
+	{
+		List<Product>  product = this.productService.getProductByBrandName(brandName);
+
+		if (product == null) {
+			return ResponseEntity.status(401).build();
+		}
+		return ResponseEntity.status(200).body(product);
+	}
 	
 	@GetMapping("/count-products")
 	public Long getProductCount()
